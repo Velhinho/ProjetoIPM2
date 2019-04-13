@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="currentday" content="today">
+		<title>Today's weather</title>
+		<link rel="stylesheet" href="../css/master.css">
+		<link rel="stylesheet" href="../css/weatherlist.css">
+
+		<script src="../javascript/igo.js"></script>
+		<script src="../javascript/weather.js"></script>
+	</head>
+
+	<body onload="getWeather()">
+		<div class="frame">
+			<img id="frameimage" src="" alt="watch frame error">
+
+			<div class="screen">
+				<div id="previousarrow" onclick="undo()"></div>
+
+				<a href="tomorrow.html">
+					<div id="nextarrow"></div>
+				</a>
+			</div>
+
+			<div class="bigbutton" onclick="bigbutton()"></div>
+
+		</div>
+	</body>
+</html>

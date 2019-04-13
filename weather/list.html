@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>City list</title>
+		<link rel="stylesheet" href="../css/master.css">
+		<link rel="stylesheet" href="../css/weatherlist.css">
+
+		<script src="../javascript/igo.js"></script>
+		<script src="../javascript/weather.js"></script>
+	</head>
+
+	<body onload="loadcities()">
+		<div class="frame">
+			<img id="frameimage" src="../images/final/weatherlist.png" alt="watch frame error">
+
+			<div class="screen">
+				<div class="citylist" id="previouscity" onclick="previouscity()"></div>
+				<div class="citylist" id="selectedcity"></div>
+				<div class="citylist" id="nextcity" onclick="nextcity()"></div>
+
+				<div id="cancelbutton" onclick="undo()"></div>
+
+				<a href="today.html">
+					<div id="okbutton"></div>
+				</a>
+			</div>
+
+			<div class="bigbutton" onclick="bigbutton()"></div>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+.citylist{
+	text-align: center;
+  position: absolute;
+  left: 11pt;
+  width: 127pt;
+  height: 28pt;
+}
+
+#previouscity{
+	font-size: 17pt;
+	top: 9pt;
+	color: rgb(60, 60, 60);
+}
+
+#selectedcity{
+	font-size: 23pt;
+	top: 36pt;
+}
+
+#nextcity{
+	font-size: 17pt;
+	top: 69pt;
+	color: rgb(60, 60, 60);
+}
+
+#cancelbutton{
+	position: absolute;
+	top: 102pt;
+ 	left: 6pt;
+  width: 64pt;
+  height: 45pt;
+}
+
+#okbutton{
+	position: absolute;
+	top: 102pt;
+ 	left: 77pt;
+  width: 64pt;
+  height: 45pt;
+}
+
+#previousarrow{
+	position: absolute;
+	top: 2pt;
+	left: 4pt;
+	height: 153pt;
+	width: 20pt;
+}
+
+#nextarrow{
+	position: absolute;
+	top: 2pt;
+	left: 127pt;
+	height: 153pt;
+	width: 20pt;
+}

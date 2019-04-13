@@ -1,0 +1,40 @@
+body{
+	font-family: "Verdana";
+}
+
+.frame{
+	position: relative;
+	left: 200pt;
+	top: 200pt;
+	width: 5.5cm;
+	height: 5.5cm;
+}
+
+#frameimage{
+	width: 5.5cm;
+	height: 5.5cm;
+}
+
+.screen{
+	position: absolute;
+	width: 159pt;
+	height: 168pt;
+	top: 0pt;
+	left: 0pt;
+}
+
+.bigbutton{
+	position: absolute;
+	top: 65pt;
+	left: 149pt;
+	width: 7pt;
+	height: 26pt;
+}
+
+#time{
+	position: absolute;
+	top: 58pt;
+	left: 36pt;
+	font-size: 27pt;
+	color: white;
+}
