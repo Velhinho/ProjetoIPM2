@@ -23,6 +23,14 @@ body{
 	left: 0pt;
 }
 
+#toptime{
+	position: absolute;
+	top: 2pt;
+	left: 100pt;
+	font-size: 13pt;
+	color: aliceblue;
+}
+
 .bigbutton{
 	position: absolute;
 	top: 65pt;

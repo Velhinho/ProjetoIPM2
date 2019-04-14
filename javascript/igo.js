@@ -10,7 +10,14 @@ function getTime() {
 	if (mins < 10) {
 		mins = "0" + mins;
 	}
-	document.getElementById("time").innerHTML = hours + ":" + mins;
+
+	sessionStorage.time = hours + ":" + mins;
+	document.getElementById("time").innerHTML = sessionStorage.time;
+}
+
+
+function putTime() {
+	document.getElementById("toptime").innerHTML = sessionStorage.time;
 }
 
 
