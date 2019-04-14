@@ -42,9 +42,17 @@
 #previousarrow{
 	position: absolute;
 	top: 2pt;
-	left: 4pt;
+	left: 2pt;
 	height: 153pt;
-	width: 20pt;
+	width: 25pt;
+}
+
+#backtext{
+	position: absolute;
+	top: 130pt;
+	left: 10pt;
+	font-size: 15pt;
+	color: aliceblue;
 }
 
 #nextarrow{
@@ -52,5 +60,14 @@
 	top: 2pt;
 	left: 127pt;
 	height: 153pt;
-	width: 20pt;
+	width: 25pt;
+}
+
+
+#nexttext{
+	position: absolute;
+	top: 130pt;
+	left: 132pt;
+	font-size: 15pt;
+	color: aliceblue;
 }

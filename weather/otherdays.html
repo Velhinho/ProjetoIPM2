@@ -11,13 +11,17 @@
 		<script src="../javascript/weather.js"></script>
 	</head>
 
-	<body onload="getWeather()">
+	<body onload="getWeather(); fillText();">
 		<div class="frame">
 			<img id="frameimage" src="" alt="watch frame error">
 
 			<div class="screen">
-				<div id="previousarrow" onclick="undo()"></div>
+				<a href="#">
+					<div id="previousarrow" onclick="undo()"></div>
+				</a>
 			</div>
+
+			<div id="backtext"></div>
 
 			<a href="#">
 				<div class="bigbutton" onclick="bigbutton()"></div>

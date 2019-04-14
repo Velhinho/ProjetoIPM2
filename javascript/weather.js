@@ -77,3 +77,8 @@ function getWeather() {
 	var weatherfile = "../images/final/" + currentday + cityname + ".png";
 	document.getElementById("frameimage").src = weatherfile;
 }
+
+function fillText() {
+	document.getElementById("backtext").innerHTML = "<"
+	document.getElementById("nexttext").innerHTML = ">"
+}
