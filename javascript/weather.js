@@ -73,7 +73,7 @@ function getMeta(metaName) {
 function getWeather() {
 	var currentcity = Number(sessionStorage.currentcity);
 	var currentday = getMeta("currentday");
-	var cityname = citylist[currentcity];
+	var cityname = citylist[currentcity].toLowerCase();
 	var weatherfile = "../images/final/" + currentday + cityname + ".png";
 	document.getElementById("frameimage").src = weatherfile;
 }
