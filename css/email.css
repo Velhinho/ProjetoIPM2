@@ -1,0 +1,42 @@
+#backtext{
+    position: absolute;
+    top: 4pt;
+    left: 13pt;
+    font-size: 15pt;
+    color: aquamarine;
+}
+
+#emailtable{
+    position: absolute;
+    top: 28pt;
+    left: 13pt;
+    height: 125pt;
+    overflow: auto;
+}
+
+.email{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: rgba(160, 160, 160, 60%);
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 115pt;
+    height: 75pt;
+    padding-left: 5pt;
+    margin-bottom: 10pt;
+}
+
+.name{
+    font-size: 19pt;
+}
+
+.topic{
+    font-size: 16pt;
+}
+
+.emailtext{
+    padding-top: 2pt;
+    font-size: 14pt;
+    color: gainsboro;
+}
