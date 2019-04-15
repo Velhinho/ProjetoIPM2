@@ -1,0 +1,13 @@
+#tablemenu{
+    position: absolute;
+    top: 25pt;
+    left: 25pt;
+}
+
+.tablecontent{
+    
+    font-size: 16pt;
+    color: black;
+    margin-bottom: 10pt;
+    background-color: aliceblue;
+}

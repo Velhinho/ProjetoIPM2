@@ -14,10 +14,6 @@
     overflow: auto;
 }
 
-.textdeco{
-    text-decoration: none;
-}
-
 .email{
     color: aliceblue;
     background-color: rgba(160, 160, 160, 60%);
