@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Lock Screen</title>
-        <link rel="stylesheet" href="../css/master.css">
-        <link rel="stylesheet" href="../css/email.css">
-        <script src="../javascript/igo.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Inbox</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/email.css">
+    <script src="../javascript/igo.js"></script>
+</head>
 
-    <body onload="putTime();">
-        <div class="frame">
-            <img id="frameimage" src="../images/test/watchframe.png" alt="watch frame error">
+<body onload="putTime();">
+    <div class="frame">
+        <img id="frameimage" src="../images/test/watchframe.png" alt="watch frame error">
 
-            <div id="toptime"></div>
+        <div id="toptime"></div>
 
-            <div id="backtext">Inbox</div>
+        <div id="backtext">Inbox</div>
 
-            <div id="emailtable">
-                <a href="#" class="emaillink">
-                    <div class="email">
-                        <b class="name">John</b>
-                        <div class="topic">Business Stuff</div>
-                        <div class="emailtext">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Corporis nostrum nisi saepe porro, natus rem pariatur similique optio eligendi, 
-                            dicta corrupti magnam deserunt laudantium cupiditate, 
-                            voluptas aliquam voluptates officia illum!
-                        </div>
+        <div id="emailtable">
+            <a href="johnemail.html" class="textdeco">
+                <div class="email">
+                    <b class="name">John</b>
+                    <div class="topic">Business Stuff</div>
+                    <div class="emailtext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Corporis nostrum nisi saepe porro, natus rem pariatur similique optio eligendi, 
+                        dicta corrupti magnam deserunt laudantium cupiditate, 
+                        voluptas aliquam voluptates officia illum!
                     </div>
-                </a>
+                </div>
+            </a>
 
-                <a href="#" class="emaillink">
-                    <div class="email">
-                        <b class="name">Nice Hotel</b>
-                        <div class="topic">Hotel Stuff</div>
-                        <div class="emailtext">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Corporis nostrum nisi saepe porro, natus rem pariatur similique optio eligendi,
-                            dicta corrupti magnam deserunt laudantium cupiditate,
-                            voluptas aliquam voluptates officia illum!
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <a href="#">
-                <div class="bigbutton" onclick="bigbutton();"></div>
+            <a href="hotelemail.html" class="textdeco">
+                <div class="email">
+                    <b class="name">Nice Hotel</b>
+                    <div class="topic">Hotel Stuff</div>
+                    <div class="emailtext">Your hotel check in code is: 12345</div>
+                </div>
             </a>
         </div>
-    </body>
 
+        <a href="#">
+            <div class="bigbutton" onclick="bigbutton();"></div>
+        </a>
+    </div>
+</body>
 </html>

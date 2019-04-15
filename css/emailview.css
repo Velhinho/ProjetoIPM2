@@ -1,0 +1,29 @@
+.viewname{
+    position: absolute;
+    top: 25pt;
+
+    padding-left: 12pt;
+    width: 136pt;
+    background-color: rgba(240, 240, 240, 90%);
+    color: black;
+    text-align: left;
+}
+
+.viewtopic{
+    position: absolute;
+    top: 50pt;
+    left: 12pt;
+    color: aliceblue;
+}
+
+.viewtext{
+    position: absolute;
+    top: 75pt;
+    left: 12pt;
+    width: 130pt;
+    height: 78pt;
+    overflow: auto;
+
+    font-size: 14pt;
+    color: aliceblue;
+}
