@@ -2,8 +2,7 @@ function bigbutton(){
 	window.location.assign("../main/mainmenu.html");
 }
 
-
-function getTime() {
+function getTime(){
 	var date = new Date();
 	var hours = date.getHours();
 	var mins = date.getMinutes();
@@ -11,13 +10,19 @@ function getTime() {
 		mins = "0" + mins;
 	}
 
-	sessionStorage.time = hours + ":" + mins;
-	document.getElementById("time").innerHTML = sessionStorage.time;
+	return hours + ":" + mins;
+}
+
+
+function lockTime() {
+	var time = getTime();
+	document.getElementById("time").innerHTML = time;
 }
 
 
 function putTime() {
-	document.getElementById("toptime").innerHTML = sessionStorage.time;
+	var time = getTime();
+	document.getElementById("toptime").innerHTML = time;
 }
 
 
