@@ -6,11 +6,48 @@
 
 .tablecontent{
     width: 118pt;
-    font-size: 16pt;
+    font-size: 20pt;
     color: aliceblue;
 
     text-align: center;
     padding: 5pt;
     margin-bottom: 5pt;
     background-color: darkcyan;
+}
+
+#numbertable{
+    position: absolute;
+    top: 15pt;
+    left: 7pt;
+}
+
+td{
+    width: 30pt;
+    text-align: center;
+}
+
+.currentrow{
+    font-size: 25pt;
+    color: aliceblue;
+}
+
+.otherrow{
+    font-size: 13pt;
+    color: darkgray;
+}
+
+#cancelbutton{
+	position: absolute;
+	top: 102pt;
+ 	left: 6pt;
+ 	width: 64pt;
+  	height: 45pt;
+}
+
+#okbutton{
+	position: absolute;
+	top: 102pt;
+ 	left: 77pt;
+  	width: 64pt;
+  	height: 45pt;
 }
