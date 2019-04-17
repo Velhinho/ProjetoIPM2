@@ -11,9 +11,11 @@
     <script src="../javascript/hotel.js"></script>
 </head>
 
-<body onload="putTime()">
+<body>
     <div class="frame">
-        <img id="frameimage" src="../images/final/weatherlist.png" alt="watch frame error">
+        <img id="frameimage" src="../images/test/weatherlist.png" alt="watch frame error">
+
+        <div id="backtext">Id Number</div>
 
         <table id="numbertable">
             <tr class="otherrow">
@@ -36,12 +38,12 @@
             </tr>
         </table>
 
-        <a href="#">
-            <div id="cancelbutton" onclick="undo()"></div>
+        <a href="hotelmenu.html">
+            <div id="cancelbutton"></div>
         </a>
-        
+
         <a href="#">
-            <div id="okbutton" onclick="saveNumber(hotelNumber, )"></div>
+            <div id="okbutton" onclick="checkNumber(1211, 'hotelnumber.html')"></div>
         </a>
 
         <a href="#">
@@ -49,4 +51,5 @@
         </a>
     </div>
 </body>
+
 </html>
