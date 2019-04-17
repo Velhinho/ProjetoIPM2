@@ -37,11 +37,11 @@ td{
 }
 
 #cancelbutton{
-	position: absolute;
-	top: 102pt;
- 	left: 6pt;
- 	width: 64pt;
-  	height: 45pt;
+    position: absolute;
+    top: 102pt;
+    left: 6pt;
+    width: 64pt;
+    height: 45pt;
 }
 
 #okbutton{
@@ -49,5 +49,6 @@ td{
 	top: 102pt;
  	left: 77pt;
   	width: 64pt;
-  	height: 45pt;
+    height: 45pt;
+      
 }

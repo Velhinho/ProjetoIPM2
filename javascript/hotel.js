@@ -1,51 +1,57 @@
+function getTable(cellnumber) {
+    var numbertable = document.getElementById("numbertable");
+    var table = {
+        previous: numbertable.rows[0].cells[cellnumber],
+        current: numbertable.rows[1].cells[cellnumber],
+        next: numbertable.rows[2].cells[cellnumber],
+    };
+
+    return table;
+}
+
+
 function changeNumber(rownumber, cellnumber)
 {
     if(rownumber == 0)
-        previousNumber(rownumber, cellnumber);
+        previousNumber(cellnumber);
     
     if(rownumber == 2)
-        nextNumber(rownumber, cellnumber);
+        nextNumber(cellnumber);
 }
 
 
-function previousNumber(rownumber, cellnumber)
+function previousNumber(cellnumber)
 {
-    var table = document.getElementById("numbertable");
-    var previous = table.rows[0].cells[cellnumber];
-    var current = table.rows[1].cells[cellnumber];
-    var next = table.rows[2].cells[cellnumber];
+    var table = getTable(cellnumber);
 
-    next.innerHTML = current.innerHTML;
-    current.innerHTML = previous.innerHTML;
+    table.next.innerHTML = table.current.innerHTML;
+    table.current.innerHTML = table.previous.innerHTML;
 
-    if(previous.innerHTML == "0"){
-        previous.innerHTML = "9";
+    if(table.previous.innerHTML == "0"){
+        table.previous.innerHTML = "9";
     }
     else{
-        previous.innerHTML = parseInt(previous.innerHTML) - 1;
+        table.previous.innerHTML = parseInt(table.previous.innerHTML) - 1;
     }
 }
 
 
-function nextNumber(rownumber, cellnumber)
+function nextNumber(cellnumber)
 {
-    var table = document.getElementById("numbertable");
-    var previous = table.rows[rownumber - 2].cells[cellnumber];
-    var current = table.rows[rownumber - 1].cells[cellnumber];
-    var next = table.rows[rownumber].cells[cellnumber];
+    var table = getTable(cellnumber);
 
-    previous.innerHTML = current.innerHTML;
-    current.innerHTML = next.innerHTML;
+    table.previous.innerHTML = table.current.innerHTML;
+    table.current.innerHTML = table.next.innerHTML;
 
-    if(next.innerHTML == "9"){
-        next.innerHTML = "0"
+    if(table.next.innerHTML == "9"){
+        table.next.innerHTML = "0"
     }
     else{
-        next.innerHTML = parseInt(next.innerHTML) + 1;
+        table.next.innerHTML = parseInt(table.next.innerHTML) + 1;
     }
 }
 
 
-function saveNumber(){
-    var table
+function saveNumber(numberName, number){
+    sessionStorage.setItem(numberName, number);
 }
