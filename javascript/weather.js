@@ -70,7 +70,8 @@ function getMeta(metaName) {
   return '';
 }
 
-function getWeather() {
+function getWeather() 
+{
 	var currentcity = Number(sessionStorage.currentcity);
 	var currentday = getMeta("currentday");
 	var cityname = citylist[currentcity].toLowerCase();
@@ -78,7 +79,11 @@ function getWeather() {
 	document.getElementById("frameimage").src = weatherfile;
 }
 
-function fillText() {
+function fillText() 
+{
+	var currentcity = Number(sessionStorage.currentcity);
+	var cityname = citylist[currentcity];
+	document.getElementById("backtext").innerHTML = cityname;
 	document.getElementById("backarrow").innerHTML = "<"
 	document.getElementById("nextarrow").innerHTML = ">"
 }
