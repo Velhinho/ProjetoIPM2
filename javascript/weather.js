@@ -79,6 +79,6 @@ function getWeather() {
 }
 
 function fillText() {
-	document.getElementById("backtext").innerHTML = "<"
-	document.getElementById("nexttext").innerHTML = ">"
+	document.getElementById("backarrow").innerHTML = "<"
+	document.getElementById("nextarrow").innerHTML = ">"
 }

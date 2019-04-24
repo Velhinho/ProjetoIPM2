@@ -1,25 +1,25 @@
 .citylist{
 	text-align: center;
-  position: absolute;
-  left: 11pt;
-  width: 127pt;
-  height: 28pt;
+	position: absolute;
+	left: 11pt;
+	width: 127pt;
+	height: 28pt;
 }
 
 #previouscity{
 	font-size: 17pt;
-	top: 9pt;
+	top: 24pt;
 	color: rgb(60, 60, 60);
 }
 
 #selectedcity{
 	font-size: 23pt;
-	top: 36pt;
+	top: 48pt;
 }
 
 #nextcity{
 	font-size: 17pt;
-	top: 69pt;
+	top: 77pt;
 	color: rgb(60, 60, 60);
 }
 
@@ -39,7 +39,7 @@
   	height: 45pt;
 }
 
-#previousarrow{
+#previousarea{
 	position: absolute;
 	top: 2pt;
 	left: 2pt;
@@ -47,7 +47,7 @@
 	width: 25pt;
 }
 
-#backtext{
+#backarrow{
 	position: absolute;
 	top: 130pt;
 	left: 10pt;
@@ -55,7 +55,7 @@
 	color: aliceblue;
 }
 
-#nextarrow{
+#nextarea{
 	position: absolute;
 	top: 2pt;
 	left: 127pt;
@@ -64,7 +64,7 @@
 }
 
 
-#nexttext{
+#nextarrow{
 	position: absolute;
 	top: 130pt;
 	left: 132pt;

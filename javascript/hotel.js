@@ -43,15 +43,51 @@ function nextNumber(cellnumber)
     table.previous.innerHTML = table.current.innerHTML;
     table.current.innerHTML = table.next.innerHTML;
 
-    if(table.next.innerHTML == "9"){
+    if(table.next.innerHTML == "9")
+    {
         table.next.innerHTML = "0"
     }
-    else{
+    else
+    {
         table.next.innerHTML = parseInt(table.next.innerHTML) + 1;
     }
 }
 
 
-function saveNumber(numberName, number){
-    sessionStorage.setItem(numberName, number);
+function getNumber()
+{
+    var tablemiddlerow = document.getElementById("numbertable").rows[1];
+    var numberstring = "";
+
+    for (let letter = 0; letter < tablemiddlerow.cells.length; letter++) {
+        const element = tablemiddlerow.cells[letter].innerHTML;
+        numberstring += element;
+    }
+
+    return parseInt(numberstring);
+}
+
+
+function checkNumber(password, next_href)
+{
+    var number = getNumber();
+
+    console.log(number);
+
+    if(number != password)
+    {
+        wrongNumber("Hotel Number");
+    }
+    else
+    {
+        window.location.assign(next_href);
+    }
+}
+
+
+function wrongNumber()
+{
+    var backtext = document.getElementById("backtext");
+    backtext.innerHTML = "Invalid Number";
+    backtext.style.color = "rgb(255, 147, 131)";
 }

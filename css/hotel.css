@@ -17,7 +17,7 @@
 
 #numbertable{
     position: absolute;
-    top: 15pt;
+    top: 28pt;
     left: 7pt;
 }
 
@@ -51,4 +51,15 @@ td{
   	width: 64pt;
     height: 45pt;
       
+}
+
+
+#done{
+    position: absolute;
+    top: 48pt;
+    left: 23pt;
+    width:110pt;
+
+    font-size: 27pt;
+    color: mediumaquamarine;
 }
