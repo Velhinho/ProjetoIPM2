@@ -1,4 +1,9 @@
-function getTable(cellnumber) {
+var hotelnames = ["Hotel1", "Hotel2", "Hotel3"];
+var hotelnumbers = [1111, 2222, 3333];
+var idnumbers = [9999, 8888, 7777];
+
+function getTable(cellnumber) 
+{
     var numbertable = document.getElementById("numbertable");
     var table = {
         previous: numbertable.rows[0].cells[cellnumber],
@@ -54,7 +59,7 @@ function nextNumber(cellnumber)
 }
 
 
-function getNumber()
+function getEnteredNumber()
 {
     var tablemiddlerow = document.getElementById("numbertable").rows[1];
     var numberstring = "";
@@ -68,20 +73,58 @@ function getNumber()
 }
 
 
-function checkNumber(password, next_href)
+function passwordIndex(list, password)
 {
-    var number = getNumber();
-
-    console.log(number);
-
-    if(number != password)
-    {
-        wrongNumber("Hotel Number");
+    for (let index = 0; index < list.length; index++) {
+        if(password == list[index])
+            return index;
     }
-    else
+
+    return -1;
+}
+
+
+
+
+// Falta func alreadyCheckIn()
+
+
+
+
+
+
+function checkNumber(screen, next_href)
+{
+    var number = getEnteredNumber();
+    var index;
+
+    if(screen == 'id')
     {
-        window.location.assign(next_href);
+        index = passwordIndex(idnumbers, number);
+
+        if(index == -1)
+            wrongNumber();
+        
+        else
+        {
+            sessionStorage.idindex = index;
+        }
     }
+
+    if(screen == 'hotel')
+    {
+        index = parseInt(sessionStorage.index);
+        
+        if(number != hotelnumbers[index])
+            wrongNumber();
+
+        else 
+        {
+            sessionStorage.hotel = hotelnames[index];
+        }
+    }
+
+    window.location.assign(next_href);
 }
 
 
