@@ -63,14 +63,14 @@ function nextNumber(cellnumber)
 
 function addAvailableClass(table_element, anchor_element, href)
 {
-    table_element.classList.add("available");
+    table_element.className = "tablecontent available";
     anchor_element.href = href;
 }
 
 
 function addUnavailableClass(table_element, anchor_element) 
 {
-    table_element.classList.add("unavailable");
+    table_element.className = "tablecontent unavailable";
     anchor_element.href = "#";
 }
 
@@ -84,7 +84,8 @@ function alreadyCheckedIn()
     var checkinlink = document.getElementById("checkinlink");
     var checkoutlink = document.getElementById("checkoutlink");
 
-    if(!sessionStorage.hotel)
+    console.log(sessionStorage.hotel);
+    if(sessionStorage.hotel == undefined)
     {
         addUnavailableClass(current, currentlink);
         addAvailableClass(checkin, checkinlink, "idnumber.html");
@@ -92,10 +93,24 @@ function alreadyCheckedIn()
     }
     else
     {
-        addAvailableClass(current, currentlink, "#");   //FIX HREF
+        addAvailableClass(current, currentlink, "currenthotel.html");
         addUnavailableClass(checkin, checkinlink);
-        addAvailableClass(checkout, checkoutlink, "#"); //FIX HREF
+        addAvailableClass(checkout, checkoutlink, "checkoutdone.html");
     }
+}
+
+function checkOut()
+{
+    sessionStorage.removeItem("hotel");
+    sessionStorage.removeItem("index");
+}
+
+
+function currentHotel()
+{
+    console.log(sessionStorage.hotel);
+    var message = "Your current hotel is " + sessionStorage.hotel;
+    document.getElementById("currenthotelmessage").innerHTML = message;
 }
 
 
@@ -149,7 +164,7 @@ function checkNumber(screen, next_href)
 
         if(index != -1)
         {
-            sessionStorage.idindex = index;
+            sessionStorage.index = index;
             goNextScreen(next_href);
         }
         else
@@ -161,8 +176,7 @@ function checkNumber(screen, next_href)
     if(screen == 'hotel')
     {
         index = parseInt(sessionStorage.index);
-        
-        if(number.localeCompare(hotelnumbers[index]))
+        if(!number.localeCompare(hotelnumbers[index]))
         {
             sessionStorage.hotel = hotelnames[index];
             goNextScreen(next_href);

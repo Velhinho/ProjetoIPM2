@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hotel Menu</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/hotel.css">
+
+    <script src="../javascript/igo.js"></script>
+    <script src="../javascript/hotel.js"></script>
+</head>
+
+<body onload="putTime();">
+    <div class="frame">
+        <img id="frameimage" src="../images/test/weatherlist.png" alt="watch frame error">
+
+        <div id="toptime"></div>
+
+        <a href="#">
+            <div id="backtext" onclick="undo()">Check Out</div>
+        </a>
+
+        <div id="checkoutmessage">Are you Sure?</div>
+
+        <a href="#">
+            <div id="cancelbutton" onclick="undo()"></div>
+        </a>
+        
+        <a href="hotelmenu.html">
+            <div id="okbutton" onclick="checkOut()"></div>
+        </a>
+
+        <a href="#">
+            <div class="bigbutton" onclick="bigbutton();"></div>
+        </a>
+    </div>
+</body>
+</html>

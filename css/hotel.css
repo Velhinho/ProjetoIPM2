@@ -23,6 +23,43 @@
     background-color: gainsboro;
 }
 
+#currenthotelmessage{
+    position: absolute;
+    top: 35pt;
+    left: 10pt;
+    width:140pt;
+
+    font-size: 24pt;
+    color: aliceblue;
+}
+
+#checkoutmessage{
+    position: absolute;
+    top: 30pt;
+    left: 5pt;
+    width:140pt;
+
+    font-size: 27pt;
+    text-align: center;
+    color: aliceblue;
+}
+
+#cancelbutton{
+	position: absolute;
+	top: 102pt;
+ 	left: 6pt;
+ 	width: 64pt;
+  	height: 45pt;
+}
+
+#okbutton{
+	position: absolute;
+	top: 102pt;
+ 	left: 77pt;
+  	width: 64pt;
+  	height: 45pt;
+}
+
 #numbertable{
     position: absolute;
     top: 28pt;
@@ -69,5 +106,5 @@ td{
     width:110pt;
 
     font-size: 27pt;
-    color: mediumaquamarine;
+    color: aliceblue;
 }
