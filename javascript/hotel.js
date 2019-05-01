@@ -70,7 +70,7 @@ function addAvailableClass(table_element, anchor_element, href)
 
 function addUnavailableClass(table_element, anchor_element) 
 {
-    table_element.classList.add("available");
+    table_element.classList.add("unavailable");
     anchor_element.href = "#";
 }
 
@@ -87,7 +87,7 @@ function alreadyCheckedIn()
     if(!sessionStorage.hotel)
     {
         addUnavailableClass(current, currentlink);
-        addAvailableClass(checkin, checkinlink, idnumber.html);
+        addAvailableClass(checkin, checkinlink, "idnumber.html");
         addUnavailableClass(checkout, checkoutlink);
     }
     else
