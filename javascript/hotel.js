@@ -1,6 +1,7 @@
-var hotelnames = ["Hotel1", "Hotel2", "Hotel3"];
-var hotelnumbers = [1111, 2222, 3333];
-var idnumbers = [9999, 8888, 7777];
+var hotelnames = ["Hotel1", "Hotel2"];
+var hotelnumbers = [2222, 4444];
+var idnumbers = [1111, 3333];
+
 
 function getTable(cellnumber) 
 {
@@ -59,6 +60,45 @@ function nextNumber(cellnumber)
 }
 
 
+
+function addAvailableClass(table_element, anchor_element, href)
+{
+    table_element.classList.add("available");
+    anchor_element.href = href;
+}
+
+
+function addUnavailableClass(table_element, anchor_element) 
+{
+    table_element.classList.add("available");
+    anchor_element.href = "#";
+}
+
+
+function alreadyCheckedIn()
+{
+    var current = document.getElementById("current");
+    var checkin = document.getElementById("checkin");
+    var checkout = document.getElementById("checkout");
+    var currentlink = document.getElementById("currentlink");
+    var checkinlink = document.getElementById("checkinlink");
+    var checkoutlink = document.getElementById("checkoutlink");
+
+    if(!sessionStorage.hotel)
+    {
+        addUnavailableClass(current, currentlink);
+        addAvailableClass(checkin, checkinlink, idnumber.html);
+        addUnavailableClass(checkout, checkoutlink);
+    }
+    else
+    {
+        addAvailableClass(current, currentlink, "#");   //FIX HREF
+        addUnavailableClass(checkin, checkinlink);
+        addAvailableClass(checkout, checkoutlink, "#"); //FIX HREF
+    }
+}
+
+
 function getEnteredNumber()
 {
     var tablemiddlerow = document.getElementById("numbertable").rows[1];
@@ -69,14 +109,14 @@ function getEnteredNumber()
         numberstring += element;
     }
 
-    return parseInt(numberstring);
+    return numberstring;
 }
 
 
 function passwordIndex(list, password)
 {
     for (let index = 0; index < list.length; index++) {
-        if(password == list[index])
+        if( !password.localeCompare(list[index]) )
             return index;
     }
 
@@ -84,13 +124,18 @@ function passwordIndex(list, password)
 }
 
 
+function wrongNumber() 
+{
+    var backtext = document.getElementById("backtext");
+    backtext.innerHTML = "Invalid Number";
+    backtext.style.color = "rgb(255, 147, 131)";
+}
 
 
-// Falta func alreadyCheckIn()
-
-
-
-
+function goNextScreen(next_href)
+{
+    window.location.assign(next_href);
+}
 
 
 function checkNumber(screen, next_href)
@@ -102,12 +147,14 @@ function checkNumber(screen, next_href)
     {
         index = passwordIndex(idnumbers, number);
 
-        if(index == -1)
-            wrongNumber();
-        
-        else
+        if(index != -1)
         {
             sessionStorage.idindex = index;
+            goNextScreen(next_href);
+        }
+        else
+        {
+            wrongNumber();
         }
     }
 
@@ -115,22 +162,14 @@ function checkNumber(screen, next_href)
     {
         index = parseInt(sessionStorage.index);
         
-        if(number != hotelnumbers[index])
-            wrongNumber();
-
-        else 
+        if(number.localeCompare(hotelnumbers[index]))
         {
             sessionStorage.hotel = hotelnames[index];
+            goNextScreen(next_href);
+        }
+        else 
+        {
+            wrongNumber();
         }
     }
-
-    window.location.assign(next_href);
-}
-
-
-function wrongNumber()
-{
-    var backtext = document.getElementById("backtext");
-    backtext.innerHTML = "Invalid Number";
-    backtext.style.color = "rgb(255, 147, 131)";
 }

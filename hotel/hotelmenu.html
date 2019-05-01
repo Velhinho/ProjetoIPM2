@@ -9,7 +9,7 @@
     <script src="../javascript/igo.js"></script>
 </head>
 
-<body onload="putTime();">
+<body onload="putTime(); alreadyCheckedIn();">
     <div class="frame">
         <img id="frameimage" src="../images/test/watchframe.png" alt="watch frame error">
 
@@ -18,16 +18,16 @@
         <div id="backtext">Hotel</div>
 
         <div id="tablemenu">
-            <a href="#" class="textdeco">
-                <div class="tablecontent">Booking</div>
+            <a id="currentlink" href="#" class="textdeco">
+                <div id="current" class="tablecontent">Current</div>
             </a>
 
-            <a href="idnumber.html" class="textdeco">
-                <div class="tablecontent">Check In</div>
+            <a id="checkinlink" href="#" class="textdeco">
+                <div id="checkin" class="tablecontent">Check In</div>
             </a>
 
-            <a href="#" class="textdeco">
-                <div class="tablecontent">Check Out</div>
+            <a id="checkoutlink" href="#" class="textdeco">
+                <div id="checkout" class="tablecontent">Check Out</div>
             </a>
         </div>
         

@@ -15,6 +15,16 @@
     background-color: darkcyan;
 }
 
+.available{
+    color: aliceblue;
+    background-color: darkcyan;
+}
+
+.unavailable{
+    color:  black;
+    background-color: gainsboro;
+}
+
 #numbertable{
     position: absolute;
     top: 28pt;
