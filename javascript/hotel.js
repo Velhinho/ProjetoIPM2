@@ -1,6 +1,6 @@
-var hotelnames = ["Hotel1", "Hotel2"];
-var hotelnumbers = [2222, 4444];
-var idnumbers = [1111, 3333];
+var hotelnames = ["IPM Hotel", "IST Hotel"];
+var hotelnumbers = [5813, 5926];
+var idnumbers = [1123, 3141];
 
 
 function getTable(cellnumber) 
@@ -15,9 +15,21 @@ function getTable(cellnumber)
     return table;
 }
 
+function resetBacktext()
+{
+    if (sessionStorage.backtext != undefined)
+    {
+        var backtext = document.getElementById("backtext");
+        backtext.innerHTML = sessionStorage.backtext;
+        backtext.style.color = "aquamarine";
+    }
+
+}
 
 function changeNumber(rownumber, cellnumber)
 {
+    resetBacktext();
+
     if(rownumber == 0)
         previousNumber(cellnumber);
     
@@ -142,6 +154,7 @@ function passwordIndex(list, password)
 function wrongNumber() 
 {
     var backtext = document.getElementById("backtext");
+    sessionStorage.backtext = backtext.innerHTML;
     backtext.innerHTML = "Invalid Number";
     backtext.style.color = "rgb(255, 147, 131)";
 }

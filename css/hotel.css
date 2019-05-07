@@ -33,7 +33,7 @@
     color: aliceblue;
 }
 
-#checkoutmessage{
+#areyousure{
     position: absolute;
     top: 30pt;
     left: 5pt;
@@ -43,6 +43,19 @@
     text-align: center;
     color: aliceblue;
 }
+
+#checkoutmessage{
+    position: absolute;
+    top: 50pt;
+    left: 5pt;
+    width:140pt;
+
+    font-size: 27pt;
+    text-align: center;
+    color: aliceblue;
+}
+
+
 
 #cancelbutton{
 	position: absolute;
