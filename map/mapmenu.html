@@ -2,37 +2,39 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Map Menu</title>
+    <title>Lock Screen</title>
     <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/map.css">
     <script src="../javascript/igo.js"></script>
 </head>
 
 <body onload="putTime();">
     <div class="frame">
-        <img id="frameimage" src="../images/test/mainscreen.png" alt="watch frame error">
+        <img id="frameimage" src="../images/test/watchframe.png" alt="watch frame error">
 
         <div id="toptime"></div>
+        <div id="backtext">Map</div>
 
-        <div class="screen">
-            <a href="#">
-                <div id="mapbutton"></div>
+        <div id="tablemenu" >
+            <a href="#" class="textdeco">
+                <div class="available tablecontent">Hotels</div>
+            </a>
+        
+            <a href="#" class="textdeco">
+                <div class="available tablecontent">Restaurants</div>
+            </a>
+        
+            <a href="#" class="textdeco">
+                <div class="available tablecontent">Museums</div>
             </a>
 
-            <a href="../hotel/hotelmenu.html">
-                <div id="hotelbutton"></div>
-            </a>
-
-            <a href="../email/list.html">
-                <div id="emailbutton"></div>
-            </a>
-
-            <a href="../weather/list.html">
-                <div id="weatherbutton"></div>
+            <a href="#" class="textdeco">
+                <div class="available tablecontent">Landmarks</div>
             </a>
         </div>
 
-        <a href="./lock.html">
-            <div class="bigbutton"></div>
+        <a href="#">
+            <div class="bigbutton" onclick="bigbutton()"></div>
         </a>
 
     </div>

@@ -1,0 +1,22 @@
+#tablemenu{
+    position: absolute;
+    top: 25pt;
+    left: 10pt;
+    width: 136pt;
+    height: 123pt;
+    overflow-y: scroll;
+}
+
+.tablecontent{
+    width: 110pt;
+    font-size: 20pt;
+
+    text-align: center;
+    padding: 5pt;
+    margin-bottom: 9pt;
+}
+
+.available{
+    color: aliceblue;
+    background-color: darkcyan;
+}
