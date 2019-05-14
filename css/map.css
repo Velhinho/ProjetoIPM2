@@ -20,3 +20,11 @@
     color: aliceblue;
     background-color: darkcyan;
 }
+
+#mapimage{
+    position: absolute;
+    top: -57pt;
+    left: -29pt;
+    width: 331pt;
+    height: 308pt;
+}
